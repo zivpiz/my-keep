@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test NoteSubmit Component  Snapshot rendering Renders appropriate snapshot 1`] = `
+<div
+  className="AllNotes"
+>
+  <ol
+    className="uncheckedNotes"
+  />
+  <NoteSubmit
+    updateNoteList={[Function]}
+  />
+  <ol
+    className="checkedNotes"
+  />
+</div>
+`;

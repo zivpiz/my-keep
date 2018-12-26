@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test NoteSubmit Component  Renders appropriate snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    autoComplete="off"
+    name="inputName"
+    onChange={[Function]}
+    placeholder="Take a note..."
+    type="text"
+    value=""
+  />
+</form>
+`;
