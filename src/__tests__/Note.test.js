@@ -22,7 +22,7 @@ describe("Test Note Component ", ()=>{
 
     test('Names label according to checked status', () => {
         const label = wrapper.find('label');
-        expect(label.props().className).toBe("NoteTexttrue");
+        expect(label.props().className).toBe("NoteTextChecked-true");
     });
 });
 

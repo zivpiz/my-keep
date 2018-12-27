@@ -2,17 +2,17 @@ import AllNotes from "../Components/AllNotes";
 import Note from "../Components/Note";
 import React from 'react';
 
-describe("Test NoteSubmit Component ", ()=>{
+describe("Test NoteSubmit Component ", () => {
 
     let wrapper;
-    const checkedNoteObj = {text:"checked note", checked: true};
-    const uncheckedNoteObj = {text:"unchecked note", checked: false};
-    const checkedNoteComp = <Note text="Checked Note" checked={true} id={0}/>;
-    const uncheckedNoteComp = <Note text="Unchecked Note" checked={false} id={1}/>;
+    const checkedNoteObj = {text: "checked note", checked: true};
+    const uncheckedNoteObj = {text: "unchecked note", checked: false};
+    const checkedNoteProps = {text: "Checked Note", checked: true, id: 0};
+    const uncheckedNoteProps = {text: "Unchecked Note", checked: false, id: 1};
 
-    describe("Snapshot rendering", ()=>{
-        beforeEach(()=>{
-            wrapper = shallow(<AllNotes />);
+    describe("Snapshot rendering", () => {
+        beforeEach(() => {
+            wrapper = shallow(<AllNotes/>);
         });
 
         test('Renders appropriate snapshot', () => {
@@ -20,9 +20,9 @@ describe("Test NoteSubmit Component ", ()=>{
         });
     });
 
-    describe("Creation of new notes", ()=>{
-        beforeEach(()=>{
-            wrapper = shallow(<AllNotes />);
+    describe("Creation of new notes", () => {
+        beforeEach(() => {
+            wrapper = shallow(<AllNotes/>);
         });
 
         test('Creates new checked note, appends it to checked notes list and updates id', () => {
@@ -48,9 +48,9 @@ describe("Test NoteSubmit Component ", ()=>{
         });
     });
 
-    describe("Update Check for checked note", ()=>{
-        beforeEach(()=>{
-            wrapper = shallow(<AllNotes />);
+    describe("Update Check for checked note", () => {
+        beforeEach(() => {
+            wrapper = shallow(<AllNotes/>);
             wrapper.instance().createNewNote(checkedNoteObj);
         });
 
@@ -58,16 +58,16 @@ describe("Test NoteSubmit Component ", ()=>{
             expect(wrapper.find('.uncheckedNotes').children().length).toBe(0);
             expect(wrapper.find('.checkedNotes').children().length).toBe(1);
 
-            wrapper.instance().updateNoteCheck(checkedNoteComp);
+            wrapper.instance().updateNoteCheck(checkedNoteProps);
 
             expect(wrapper.find('.uncheckedNotes').children().length).toBe(1);
             expect(wrapper.find('.checkedNotes').children().length).toBe(0);
         });
     });
 
-    describe("Update Check for unchecked note", ()=>{
-        beforeEach(()=>{
-            wrapper = shallow(<AllNotes />);
+    describe("Update Check for unchecked note", () => {
+        beforeEach(() => {
+            wrapper = shallow(<AllNotes/>);
             wrapper.instance().createNewNote(checkedNoteObj);
             wrapper.instance().createNewNote(uncheckedNoteObj);
         });
@@ -76,7 +76,7 @@ describe("Test NoteSubmit Component ", ()=>{
             expect(wrapper.find('.uncheckedNotes').children().length).toBe(1);
             expect(wrapper.find('.checkedNotes').children().length).toBe(1);
 
-            wrapper.instance().updateNoteCheck(uncheckedNoteComp);
+            wrapper.instance().updateNoteCheck(uncheckedNoteProps);
 
             expect(wrapper.find('.uncheckedNotes').children().length).toBe(0);
             expect(wrapper.find('.checkedNotes').children().length).toBe(2);

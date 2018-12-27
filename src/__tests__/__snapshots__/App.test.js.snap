@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test App Comp Basic Rendering renders appropriate snapshot 1`] = `
+exports[`Test App Component Basic Rendering Renders appropriate snapshot 1`] = `
 <div>
   <h1
     className="ui top attached header"

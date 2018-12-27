@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './../style.css';
 
-class Note extends Component {
 
-    render() {
-        return (
-            <div className="Note">
-                <input type="checkbox" className="NoteCheckbox" onChange={() => this.props.handleCheck(this)}
-                       defaultChecked={this.props.checked}/>
-                <label className={`NoteText${this.props.checked}`}>{this.props.text}</label>
-            </div>
-        )
-    }
-}
+const Note = (props) =>{
+    return (
+        <div className="Note">
+            <input type="checkbox" className="NoteCheckbox" onChange={() => props.handleCheck(props)}
+                   checked={props.checked}/>
+            <label className={`NoteTextChecked-${props.checked}`}>{props.text}</label>
+        </div>
+    )
+};
 
 export default Note;

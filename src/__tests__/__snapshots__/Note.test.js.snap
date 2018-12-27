@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Note Component  renders appropriate snapshot 1`] = `
+exports[`Test Note Component  Renders appropriate snapshot 1`] = `
 <div
   className="Note"
 >
   <input
+    checked={true}
     className="NoteCheckbox"
-    defaultChecked={true}
     onChange={[Function]}
     type="checkbox"
   />
   <label
-    className="NoteTexttrue"
+    className="NoteTextChecked-true"
   >
     Note Test
   </label>

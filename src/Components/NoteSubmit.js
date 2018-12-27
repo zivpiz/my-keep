@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Note from './Note';
 
 class NoteSubmit extends Component {
     constructor(props) {
